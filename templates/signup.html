@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="nom" placeholder="Nom Complet " required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+        <input type="password" name="confirm_password" placeholder="Confirmer le mot de passe" required>
+        <button type="submit">S'inscrire</button>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+    </form>
+    <a href="{% url 'signin' %}">Vous avez déjà un compte ? Connectez-vous ici</a>
+</body>
+</html>

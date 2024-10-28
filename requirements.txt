@@ -1,0 +1,4 @@
+djangorestframework
+pyrebase4
+firebase_admin
+mysqlclient
